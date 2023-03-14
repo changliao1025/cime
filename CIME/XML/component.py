@@ -81,17 +81,18 @@ class Component(EntryID):
             for key, value in self.attrib(valnode).items():
                 # determine if key is in attributes dictionary
                 match_count = 0
-                if attributes is not None and key in attributes:
-                    if re.search(value, attributes[key]):
+                if attributes is not None and key in attributes:                                       
+                    if re.search(value, attributes[key]):                        
                         logger.debug(
                             "Value {} and key {} match with value {}".format(
                                 value, key, attributes[key]
                             )
                         )
                         match_count += 1
-                    else:
+                    else:                            
                         match_count = 0
                         break
+                   
 
             # a match is found
             if match_count > 0:

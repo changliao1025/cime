@@ -16,3 +16,7 @@ from CIME.scripts.create_newcase import _main_func
 
 if __name__ == "__main__":
     _main_func()
+
+    #main( ['-case', '/compyfs/liao313/04model/e3sm/site/cases//e3sm20230101005', '-res', 'ELM_USRDAT', 
+    #             '-mach', 'compy', '-compiler',  'intel',  '-compset', 'IELMDROF', '-project', 'e3sm'])
+    

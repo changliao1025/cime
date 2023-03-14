@@ -15,7 +15,10 @@ To run this initially for the case, simply run:
 To rerun after making changes to env_mach_pes.xml or env_mach_specific.xml, run:
    ./case.setup --reset
 """
-
+#debug 
+import sys
+sys.path.append('/qfs/people/liao313/workspace/fortran/e3sm/E3SM/cime/CIME/Tools')
+sys.path.append('/qfs/people/liao313/workspace/fortran/e3sm/E3SM/cime/CIME')
 from standard_script_setup import *
 from CIME.case import Case
 
@@ -99,6 +102,7 @@ def _main_func(description):
         sys.argv, description
     )
     with Case(caseroot, read_only=False, record=True, non_local=non_local) as case:
+        print(case._files)
         case.case_setup(clean=clean, test_mode=test_mode, reset=reset, keep=keep)
 
 
